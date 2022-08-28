@@ -1,7 +1,8 @@
+# //Get official tomcat images from Dockerhub: https://hub.docker.com/_/tomcat/tags
 FROM tomcat:latest
-
+# //Copy files from tomcat folder to webapps folder.
 RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
-
+# //Copy war file to webapps folder to run Dockerfile
 COPY ./*.war /usr/local/tomcat/webapps 
 
 
